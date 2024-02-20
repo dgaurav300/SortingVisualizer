@@ -58,6 +58,10 @@ function updateVisual(array) {
     for (let i = 0; i < arrayBars.length; i++) {
         arrayBars[i].style.height = `${array[i]}px`;
         arrayBars[i].innerHTML = `<div class="data-label">${array[i]}</div>`;
+        arrayBars[i].classList.add('moving'); // Add the moving class
+        arrayBars[i].addEventListener('transitionend', () => {
+            arrayBars[i].classList.remove('moving'); // Remove the moving class after the transition ends
+        });
     }
 }
 
