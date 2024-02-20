@@ -56,24 +56,10 @@ async function visualizeInsertionSort() {
 function updateVisual(array) {
     const arrayBars = document.getElementsByClassName('array-bar');
     for (let i = 0; i < arrayBars.length; i++) {
-        const bar = arrayBars[i];
-        bar.style.height = `${array[i]}px`;
-        bar.innerHTML = `<div class="data-label">${array[i]}</div>`;
-
-        // Add the 'moving' class to trigger the animation
-        bar.classList.add('moving');
+        arrayBars[i].style.height = `${array[i]}px`;
+        arrayBars[i].innerHTML = `<div class="data-label">${array[i]}</div>`;
     }
-
-    // Remove the 'moving' class after a short delay
-    setTimeout(() => {
-        const arrayBars = document.getElementsByClassName('array-bar');
-        for (let i = 0; i < arrayBars.length; i++) {
-            arrayBars[i].classList.remove('moving');
-        }
-    }, 500); // Adjust the duration based on your animation duration
 }
-
-
 
 
 function updatePassInfo() {
