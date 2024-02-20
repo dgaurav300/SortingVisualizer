@@ -1,1 +1,22 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sorting Visualizer</title>
+</head>
+<body>
+    <div class="container">
+        <div id="array-container" class="array-container"></div>
+        <div id="pass-info" class="pass-info"></div>
+        <div class="btn-container">
+            <button onclick="resetArray()">Generate New Array</button>
+            <button onclick="visualizeBubbleSort()">Bubble Sort</button>
+            <button onclick="visualizeQuickSort()">Quick Sort</button>
+            <button onclick="visualizeInsertionSort()">Insertion Sort</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
